@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FluentDevelopment.Maui.Rbav.Demo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FluentDevelopment.Maui.Rbav.Demo"
+    xmlns:ext="clr-namespace:FluentDevelopment.Maui.Rbav.Extenations;assembly=FluentDevelopment.Maui.Rbav"
+    Title="FluentDevelopment.Maui.Rbav.Demo">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="login"
+        Shell.FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+    />
+
+    <FlyoutItem Title="Home" Route="main" IsVisible="{ext:ResourceToVisibility main}">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            />
+    </FlyoutItem>
+    <FlyoutItem Title="Page1" Route="page1" IsVisible="{ext:ResourceToVisibility page1}">
+        <ShellContent ContentTemplate="{DataTemplate local:Page1}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Page2" Route="page2" IsVisible="{ext:ResourceToVisibility page2}">
+        <ShellContent ContentTemplate="{DataTemplate local:Page1}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Page3" Route="page3" IsVisible="{ext:ResourceToVisibility page3}">
+        <ShellContent ContentTemplate="{DataTemplate local:Page1}"/>
+    </FlyoutItem>
+
+</Shell>
