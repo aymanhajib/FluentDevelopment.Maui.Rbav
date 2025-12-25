@@ -8,6 +8,7 @@ using System;
 namespace FluentDevelopment.Maui.Rbav.Extenations
 {
     [ContentProperty(nameof(Role))]
+    [AcceptEmptyServiceProvider]
     public class RoleToVisibilityExtension : IMarkupExtension
     {
         public string Role { get; set; } = string.Empty;

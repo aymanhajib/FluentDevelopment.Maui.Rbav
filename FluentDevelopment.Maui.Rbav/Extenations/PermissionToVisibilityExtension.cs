@@ -8,6 +8,7 @@ using System;
 namespace FluentDevelopment.Maui.Rbav.Extenations
 {
     [ContentProperty(nameof(Permission))]
+    [AcceptEmptyServiceProvider]
     public class PermissionToVisibilityExtension : IMarkupExtension
     {
         public string Permission { get; set; } = string.Empty;

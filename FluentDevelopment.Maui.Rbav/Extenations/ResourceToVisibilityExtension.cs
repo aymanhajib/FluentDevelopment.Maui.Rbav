@@ -9,6 +9,7 @@ using System;
 namespace FluentDevelopment.Maui.Rbav.Extenations
 {
     [ContentProperty(nameof(Resource))]
+    [AcceptEmptyServiceProvider]
     public class ResourceToVisibilityExtension : IMarkupExtension
     {
         public string Resource { get; set; } = string.Empty;
