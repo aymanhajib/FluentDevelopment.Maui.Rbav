@@ -1,9 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<PackageId>FluentDevelopment.Maui.Rbav</PackageId>
+		<Title>FluentDevelopment MAUI Role-Based Access View Service</Title>
+		<Version>10.0.0</Version>
+		<Authors>Fluent Development</Authors>
+		<Company>FluentDevelopment</Company>
+		<Copyright>Copyright (C) FluentDevelopment 2026</Copyright>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
-		
+
 		<SingleProject>true</SingleProject>
 		<Nullable>enable</Nullable>
 		<UseMaui>true</UseMaui>
@@ -13,20 +22,32 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</TargetPlatformMinVersion>
+		<UseMaui>true</UseMaui>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageOutputPath>../Build</PackageOutputPath>
 		
-		<PackageId>FluentDevelopment.Maui.Rbav</PackageId>
-		<Version>9.0.0</Version>
-		<Authors>FluentDevelopment</Authors>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<Description>An observable RBAC service for .NET MAUI, enabling dynamic UI updates based on user roles and permissions. Built on top of FluentDevelopment.Rba.</Description>
+		<PackageTags>MAUI;RBAC;Permissions;Roles;MVVM;FluentDevelopment;Security</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/aymanhajib/FluentDevelopment.Maui.Rbav</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/aymanhajib/FluentDevelopment.Maui.Rbav</PackageProjectUrl>
+		<PackageIcon>FluentDevelopment.png</PackageIcon>
+	</PropertyGroup>
+	
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.10" />
+		<PackageReference Include="FluentDevelopment.Rba" Version="10.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\Librarys\FluentDevelopment.Rba\FluentDevelopment.Rba\FluentDevelopment.Rba.csproj" />
+		<None Include="..\FluentDevelopment.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
-
+	
 </Project>

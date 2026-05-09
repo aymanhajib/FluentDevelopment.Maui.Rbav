@@ -4,11 +4,14 @@
              x:Class="FluentDevelopment.Maui.Rbav.Demo.Login"
              Title="Login">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry x:Name="entry" Placeholder="Enter Username"/>
+
+        <Picker x:Name="picker" Title="Picker Username" SelectedItem="admin">
+            <Picker.Items>
+                <x:String>admin</x:String>
+                <x:String>user</x:String>
+                <x:String>guest</x:String>
+            </Picker.Items>
+        </Picker>
         <Button Text="login" Clicked="Button_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

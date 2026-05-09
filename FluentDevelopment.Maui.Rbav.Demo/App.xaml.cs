@@ -17,15 +17,16 @@
             rbav.AddRolePermission(role,
                 "main",
                 "view",
-                "admin");
+                "admin"
+                );// admin
             rbav.AddRolePermission(role,
                 "page1",
                 "view"
-                );
+                ); // default admin_page1_view
             rbav.AddRolePermission(role,
                 "page2",
                 "view"
-                );
+                ); // default admin_page2_view
             rbav.AddRolePermission(role,
                 "page3",
                 "view"

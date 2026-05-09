@@ -15,21 +15,25 @@
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
             <Label
+                TextColor="Red"
                 IsVisible="{ext:PermissionToVisibility admin.main.view}"
                 Text="admin.main.view"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Label
+                TextColor="Red"
                 IsVisible="{ext:PermissionToVisibility user.main.view}"
                 Text="user.main.view"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Label
+                TextColor="Red"
                 IsVisible="{ext:PermissionToVisibility main.view}"
                 Text="main.view"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
             <Label
+                TextColor="Red"
                 IsVisible="{ext:PermissionToVisibility Permission='user'}"
                 Text="user"
                 Style="{StaticResource Headline}"
@@ -39,17 +43,13 @@
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            <Picker x:Name="roles" Title="Roles"/>
-            <Button Text="change role" Clicked="Button_Clicked_1"/>
-            <Picker x:Name="perm" Title="Permissions" ItemDisplayBinding="{Binding Name}"/>
+            <Picker x:Name="pPerm" Title="Permissions" ItemDisplayBinding="{Binding Name}"/>
             <Button Text="remove Permission" Clicked="Button_Clicked_2"/>
 
             <Button 
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Text="logout"
+                Clicked="OnLogoutClicked"
                 HorizontalOptions="Fill" />
-            <Button x:Name="btn" Text="check" Clicked="Button_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

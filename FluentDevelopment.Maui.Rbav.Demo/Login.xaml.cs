@@ -11,13 +11,16 @@ public partial class Login : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        var rolename = entry.Text;
-        if (rolename != null)
+        if (picker.SelectedItem != null)
         {
-            var role = _rbavService.GetRole(rolename);
-            if (role != null)
+            var rolename = (string)picker.SelectedItem;
+            if (rolename != null)
             {
-                _rbavService.CurrentRole = role;
+                var role = _rbavService.GetRole(rolename);
+                if (role != null)
+                {
+                    _rbavService.CurrentRole = role;
+                }
             }
         }
     }
