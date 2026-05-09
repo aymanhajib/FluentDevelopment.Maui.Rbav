@@ -1,7 +1,7 @@
 ﻿
 # FluentDevelopment.Maui.Rbav 🛡️
 
-[![NuGet Version](https://img.shields.io/badge/nuget-v1.0.0-blue.svg)](https://www.nuget.org/packages/FluentDevelopment.Maui.Rbav)
+[![NuGet Version](https://img.shields.io/badge/nuget-v10.0.0-blue.svg)](https://www.nuget.org/packages/FluentDevelopment.Maui.Rbav)
 [![Framework: .NET 10](https://img.shields.io/badge/Framework-.NET%2010-purple.svg)](https://dotnet.microsoft.com/)
 [![Platform](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Windows%20%7C%20macOS-Set.svg)](https://dotnet.microsoft.com/en-us/apps/maui)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
